@@ -16,12 +16,18 @@ body {
   min-height: 100vh;
   position: relative;
 }
+#page2 {
+  max-width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
 #navbar {
   display: flex;
 }
 #navbar img {
   width: 130px;
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 .nav2 {
   display: flex;
@@ -29,6 +35,7 @@ body {
 .nav2 ul {
   width: 100%;
   list-style: none;
+  margin-left: 30rem;
 }
 .nav2 li {
   float: left;
@@ -54,14 +61,12 @@ body {
   height: 3px;
   margin: 5px;
   transition: all ease-in-out 0.3s;
-  background-color: #101010;
+  background-color: #fb151a;
 }
 .page1-container {
   width: 100%;
   position: relative;
   height: 100vh;
-  z-index: -1;
-  /* background: url(img/banner1.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   top: 1rem;
@@ -90,7 +95,100 @@ body {
   position: absolute;
   right: 0;
 }
-
+.form-popup {
+  display: block;
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-left: 5px solid #fb151a;
+  z-index: 90;
+}
+.form-container {
+  max-width: 300px;
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.form-container input[type='date'] {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: 1px solid white;
+  background: transparent;
+  outline: none;
+  color: white;
+}
+.form-container input[type='text']:focus,
+.form-container input[type='password']:focus {
+  background-color: transparent;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #fb151a;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: red;
+}
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+.page2-text {
+  margin-top: 5%;
+  text-align: left;
+  padding: 50px;
+  margin-left: 8%;
+}
+.inline-block {
+  display: inline-block;
+}
+.page2-text h1 {
+  color: #111;
+  padding: 10px 5px;
+}
+.page2-text p {
+  color: #909090;
+  padding: 10px 5px;
+}
+#btn1 {
+  width: 140px;
+  height: 45px;
+  border: none;
+  padding: 10px 0;
+  margin-top: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 100px;
+  transition: all 0.7s ease-in;
+}
+#btn1:hover {
+  background-color: #fb151a;
+}
+.flex {
+  display: flex;
+}
+.page2-imgDiv {
+  width: 50%;
+}
+.page2-imgDiv img {
+  margin-top: 20%;
+  transition: all ease 0.8s;
+  cursor: pointer;
+}
+.page2-imgDiv img:hover {
+  transform: scale(1.1);
+}
 /* Responsive Code  */
 
 @media only screen and (max-width: 700px) {
@@ -103,10 +201,12 @@ body {
     left: 0%;
     top: -100%;
     flex-direction: column;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
+    margin-left: 0;
     border-radius: 20px;
     text-align: center;
+    z-index: 99;
     transition: all ease 0.3s;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
   }
@@ -126,5 +226,63 @@ body {
   }
   #navbar img {
     width: 100px;
+  }
+  .nav2 a {
+    text-decoration: none;
+    color: #fb151a;
+    padding: 0 5rem;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    transition: all ease-in-out 0.4s;
+    justify-content: space-between;
+  }
+  /* .open-button {
+    background-color: #555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 9;
+    bottom: 20%;
+    right: 50%;
+    width: 280px;
+    transform: translate(50%, 10px);
+  }
+  .form-popup {
+    display: none;
+    position: absolute;
+    bottom: 30%;
+    right: 25%;
+    border: 3px solid #f1f1f1;
+    z-index: 90;
+    transform: translate(16%, 14px);
+  } */
+  .flex {
+    display: inline-block;
+  }
+  .page2-text {
+    margin-top: 5%;
+    text-align: left;
+    /* padding: 10px 2px; */
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .page2-imgDiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page2-imgDiv img {
+    margin-top: 5%;
+    width: 90%;
+  }
+  .page2-text p {
+    font-size: 10px;
   }
 }
