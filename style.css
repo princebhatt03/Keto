@@ -22,6 +22,12 @@ body {
   overflow: hidden;
   position: relative;
 }
+#page3 {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: white;
+}
 #navbar {
   display: flex;
 }
@@ -230,7 +236,7 @@ body {
   .nav2 a {
     text-decoration: none;
     color: #fb151a;
-    padding: 0 5rem;
+    padding: 5px 6rem;
     text-align: center;
     font-weight: 500;
     display: flex;
