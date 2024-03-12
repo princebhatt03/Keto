@@ -1,4 +1,4 @@
-// Image Swipper
+// Image Swipper...
 
 var swiper = new Swiper('.mySwiper', {
   spaceBetween: 30,
